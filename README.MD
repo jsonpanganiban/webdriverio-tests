@@ -1,25 +1,25 @@
-# WebdriverIO-mocha-jest-allure
+WebdriverIO-mocha-jest-allure
+================
 
-###Environment Setup
-1. Dependencies
-    * Install [Node.js](https://nodejs.org/en/)
-    * Or Install Node.js with choco
-    ```
-    $ choco install node
-    ```    
+Requirements
+-----------------------
+[Nodejs](https://nodejs.org/en/)
 
-2. Project Depencies
-    ```
-    npm install
-    ```
+Getting Started
+-----------------------
+Install the dependencies
+```
+npm install
+```
 
-###Execution
-* Test in Parallel
-    ```
-    npx wdio wdio.conf.js
-    ```
+Execution
+```
+npx wdio wdio.conf.js
+```
 
-###Reports
+Reports
+-------
+Run below command to generate and open results
 ```
 allure generate --clean allure-results
 allure open

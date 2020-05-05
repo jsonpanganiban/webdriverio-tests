@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx wdio wdio.conf.js --parallel=false",
     "allure": "allure generate --report-path test-report"
   },
   "repository": {
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/jsonpanganiban/webdriverio-tests.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jayson Panganiban",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jsonpanganiban/webdriverio-tests/issues"
