@@ -1,4 +1,4 @@
-class BasePage {
+export default class BasePage {
     constructor() {};
 
     get title() {
@@ -8,7 +8,4 @@ class BasePage {
     open(path) {
         browser.url(`/${path}`);
     }
-
 }
-
-module.exports = BasePage;

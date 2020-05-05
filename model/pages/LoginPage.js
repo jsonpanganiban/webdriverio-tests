@@ -1,14 +1,4 @@
-const BasePage = require('./BasePage')
-
-class LoginPage extends BasePage{
-
-    constructor() {
-        super();
-    }
-
-    open() {
-        super.open('index.php?controller=authentication&back=my-account');
-    }
+class LoginPage {
 
     get buttonLogin() {
         return $('.login');
@@ -28,11 +18,15 @@ class LoginPage extends BasePage{
         return $('.alert-danger li').getText(); 
     }
 
-    loginAs(username, password) {
-        this.inputEmail.setValue(username);
-        this.inputPassword.setValue(password);
-        this.buttonSubmit.click();
+    get inputEmailAddress() {
+        return $('#email_create');
     }
-}
 
-module.exports = LoginPage;
+    loginAs(user) {
+        this.inputEmail.setValue(user.login);
+        this.inputPassword.setValue(user.password);
+        this.buttonSubmit.click();
+    }    
+};
+
+export const loginPage = new LoginPage();
