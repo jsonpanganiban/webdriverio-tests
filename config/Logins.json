@@ -1,0 +1,14 @@
+{
+    "invalidPassword": {
+        "login": "j@dangerous.com",
+        "password": "123123"
+    },
+    "invalidEmail": {
+        "login": "j",
+        "password": "1234567890"
+    },
+    "passwordRequired": {
+        "login": "j@dangerous.com",
+        "password": ""
+    }        
+}
