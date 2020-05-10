@@ -1,7 +1,6 @@
 const { TimelineService } = require('wdio-timeline-reporter/timeline-service');
 
 exports.config = {
-    //
     // ====================
     // Runner Configuration
     // ====================
@@ -23,7 +22,7 @@ exports.config = {
     ],
     // Patterns to exclude.
     exclude: [
-        // 'path/to/excluded/files'
+        './tests/**/*.page.js'
     ],
     //
     // ============
@@ -109,8 +108,8 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: [
-        ['chromedriver'], 
-        [TimelineService],
+        ['selenium-standalone']
+        // [TimelineService],
     ],
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber

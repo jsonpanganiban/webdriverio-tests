@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "wdio",
+        // "env": {
+        //   "CHROME_HEADLESS": "false",
+        // },
+        "type": "node",
+        "request": "launch",
+        "args": [
+          "wdio.conf.js",
+          "--spec",
+          "${file}",
+        ],
+        "cwd": "${workspaceFolder}",
+        "autoAttachChildProcesses": true,
+        "program": "${workspaceRoot}/node_modules/@wdio/cli/bin/wdio.js",
+        "console": "integratedTerminal"
+      }
+    ]
+  }

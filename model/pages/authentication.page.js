@@ -1,6 +1,6 @@
-import BasePage from './BasePage';
+import Page from './base.page';
 
-class AuthenticationPage extends BasePage{
+class AuthenticationPage extends Page{
 
     open() {
         super.open('index.php?controller=authentication&back=my-account');

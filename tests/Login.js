@@ -1,20 +1,19 @@
-import { authenticationPage } from '../model/pages/AuthenticationPage';
-import { loginPage } from '../model/pages/LoginPage';
-import { context } from '../config/Context';
+import { authenticationPage } from '../model/pages/authentication.page';
+import { loginPage } from '../model/pages/login.page';
+import { context } from "../config/context";
 
 describe('Login tests', () => {
     authenticationPage.open();
-    // it('Displays error when password is invalid', () => {
-    //     authenticationPage.open();
-    //     loginPage.loginAs(context.logins.invalidPassword);
-    //     expect(loginPage.errorText).toBe('Invalid password.');
-    // });
-    it('Displays error when username is invalid ', () => {
-        loginPage.loginAs(context.logins.invalidEmail);
-        expect(loginPage.errorText).toBe('Invalid email address.');
+    it('Displays error when password is invalid ', () => {
+        loginPage.loginAs(context.loginData.invalidPassword);
+        expect(loginPage.errorText).toBe('Authentication failed.');
     });
     it('Displays error for password required ', () => {
-        loginPage.loginAs(context.logins.passwordRequired);
+        loginPage.loginAs(context.loginData.passwordRequired);
         expect(loginPage.errorText).toBe('Password is required.');
-    });     
+    });
+    it('Displays My Account upon logging in', () => {
+        loginPage.loginAs(context.loginData.validLogin);
+        expect(loginPage.myAccountHeader).toBeDisplayed();
+    })
 })

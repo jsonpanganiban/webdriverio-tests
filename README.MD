@@ -13,14 +13,19 @@ npm install
 ```
 
 Execution
+-----------------------
+Specific Test/Spec
 ```
-npx wdio wdio.conf.js
+npm test -- --spec=tests/login.js
+```
+All Tests/Specs
+```
+npm test
 ```
 
 Reports
 -------
 Run below command to generate and open results
 ```
-allure generate --clean allure-results
-allure open
+npm run allure
 ```
